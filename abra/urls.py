@@ -20,6 +20,7 @@ from django.urls import path
 from MessageApp import views
 
 urlpatterns = [
+    path('', views.homepage, name='readme'),
     path('admin/', admin.site.urls),
     path('login/', views.login_app, name='login_app'),
     path('logout/', views.logout_view, name='logout_view'),

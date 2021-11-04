@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
@@ -5,6 +6,11 @@ from django.db.models import Q
 from MessageApp.models import Messages
 from MessageApp.serializers import MessagesSerializer
 from django.contrib.auth import authenticate, login, logout
+
+
+@csrf_exempt
+def homepage(request):
+    return render(request, 'readme.html')
 
 
 @csrf_exempt
