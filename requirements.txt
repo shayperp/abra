@@ -3,3 +3,4 @@ djangorestframework~=3.12.4
 dnspython
 django_heroku
 djongo
+gunicorn
