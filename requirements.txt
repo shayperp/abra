@@ -1,4 +1,5 @@
 Django~=3.2.9
 djangorestframework~=3.12.4
 dnspython
+django_heroku
 djongo
