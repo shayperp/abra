@@ -21,9 +21,11 @@ from MessageApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('getMessages/<int:user_id>', views.get_messages, name='get_messages'),
+    path('login/', views.login_app, name='login_app'),
+    path('logout/', views.logout_view, name='logout_view'),
+    path('getMessages/', views.get_messages, name='get_messages'),
     path('addMessage/', views.add_message, name='add_messages'),
-    path('getUnreadMessages/<int:user_id>', views.get_unread_messages, name='get_unread_messages'),
+    path('getUnreadMessages/', views.get_unread_messages, name='get_unread_messages'),
     path('readMessage/<int:message_id>', views.read_message, name='read_message'),
-    path('deleteMessage/<int:message_id>/<int:user_id>', views.delete_message, name='delete_message')
+    path('deleteMessage/<int:message_id>/', views.delete_message, name='delete_message')
 ]
